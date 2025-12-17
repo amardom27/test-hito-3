@@ -22,14 +22,6 @@ pipeline {
             }
         }
 
-        stage('Verify dependencies') {
-            steps {
-                echo 'Verifying installed dependencies...'
-                // Muestra las dependencias de primer nivel
-                sh 'npm list --depth=0'
-            }
-        }
-
         stage('Test') {
             steps {
                 echo 'Running tests...'
